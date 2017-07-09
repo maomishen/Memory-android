@@ -1,6 +1,4 @@
 language: android
-jdk:
-  - oraclejdk8
 android:
   components:
     # Uncomment the lines below if you want to
@@ -12,9 +10,13 @@ android:
     - build-tools-25.0.2
 
     # The SDK version used to compile your project
+    - android-21
+    - android-22
     - android-25
 
     # Additional components
+    - tools
+    - platform-tools
     - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
@@ -22,5 +24,17 @@ android:
 
     # Specify at least one system image,
     # if you need to run emulator(s) during your tests
-    - sys-img-armeabi-v7a-android-19
-    - sys-img-x86-android-17
+    - sys-img-armeabi-v7a-android-21
+    - sys-img-armeabi-v7a-android-22
+    - sys-img-armeabi-v7a-android-25
+
+jdk: oraclejdk8
+#
+# before_install:
+#     - rm -rf ~/.linuxbrew
+#     - yes | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+#     - export PATH="$HOME/.linuxbrew/bin:$PATH"
+#     - export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+#     - export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+#     - brew install jdk
+#     - export JAVA_HOME=/home/travis/.linuxbrew/Cellar/jdk/1.8.0_77
