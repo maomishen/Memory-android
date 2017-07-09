@@ -5,4 +5,6 @@
     <color name="colorPrimaryLight">#1976d2</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBackground">#EEEEEE</color>
+    <color name="colorCardBackground">#455a64</color>
+    <color name="colorCardTextColor">#eceff1</color>
 </resources>
