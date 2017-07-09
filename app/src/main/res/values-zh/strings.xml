@@ -2,4 +2,19 @@
 <resources>
     <string name="app_intro_skip_button">跳过</string>
     <string name="app_intro_done_button">完成</string>
+    <string name="about_us">关于我们</string>
+    <string name="action_settings">设置</string>
+    <string name="app_name">记忆</string>
+    <string name="card_button_review">复习</string>
+    <string name="card_button_setting">设置</string>
+    <string name="done">完成</string>
+    <string name="drawer_break_title">其他</string>
+    <string name="memory_archive">归档</string>
+    <string name="memory_doing">记忆</string>
+    <string name="memory_recycle">回收站</string>
+    <string name="title_create_memory">新建</string>
+    <string name="title_memory_archive">归档</string>
+    <string name="title_memory_doing">记忆</string>
+    <string name="title_memory_recycle">回收站</string>
+    <string name="user_center">用户</string>
 </resources>
