@@ -23,7 +23,10 @@ android:
     - sys-img-armeabi-v7a-android-21
     - sys-img-armeabi-v7a-android-22
     - sys-img-armeabi-v7a-android-25
-
+dependencies:
+   pre:
+     echo y | $ANDROID_HOME/tools/bin/sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2"
+     
 jdk: oraclejdk8
 os:
     - linux

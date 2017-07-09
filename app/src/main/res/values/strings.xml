@@ -21,4 +21,6 @@
     <string name="card_button_review">revise</string>
     <string name="card_button_setting">setting</string>
 
+    <string name="done">Done</string>
+
 </resources>
