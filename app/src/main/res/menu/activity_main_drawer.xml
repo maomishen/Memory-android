@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_doing"
+            android:icon="@drawable/ic_assignment_white_24dp"
+            android:checked="true"
+            android:title="@string/memory_doing" />
+        <item
+            android:id="@+id/nav_archive"
+            android:icon="@drawable/ic_archive_white_24dp"
+            android:title="@string/memory_archive" />
+        <item
+            android:id="@+id/nav_recycle"
+            android:icon="@drawable/ic_delete_white_24dp"
+            android:title="@string/memory_recycle" />
+    </group>
+
+    <item android:title="@string/drawer_break_title">
+        <menu>
+            <item
+                android:id="@+id/nav_user_center"
+                android:icon="@drawable/ic_face_white_24dp"
+                android:title="@string/user_center" />
+            <item
+                android:id="@+id/nav_about_us"
+                android:icon="@drawable/ic_copyright_white_24dp"
+                android:title="@string/about_us" />
+        </menu>
+    </item>
+
+</menu>
