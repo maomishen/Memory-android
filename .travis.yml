@@ -25,3 +25,6 @@ android:
     - sys-img-armeabi-v7a-android-21
     - sys-img-armeabi-v7a-android-22
     - sys-img-armeabi-v7a-android-25
+
+before_script:
+    - brew update
