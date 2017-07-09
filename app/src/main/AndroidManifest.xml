@@ -25,7 +25,8 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".CreateMemoryActivity"></activity>
+        <activity android:name=".CreateMemoryActivity"
+            android:label="@string/title_create_memory" />
     </application>
 
 </manifest>
