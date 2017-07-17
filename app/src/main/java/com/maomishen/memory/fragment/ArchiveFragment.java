@@ -2,11 +2,16 @@ package com.maomishen.memory.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.maomishen.memory.R;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,6 +23,10 @@ import com.maomishen.memory.R;
  */
 public class ArchiveFragment extends BaseFragment {
 
+    private RecyclerView mRecyclerView;
+    private List<String> mDatas;
+    private ArchiveAdapter mAdapter;
+
     public ArchiveFragment() {
         // Required empty public constructor
     }
@@ -28,7 +37,6 @@ public class ArchiveFragment extends BaseFragment {
      *
      * @return A new instance of fragment MemoryFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static ArchiveFragment newInstance() {
         ArchiveFragment fragment = new ArchiveFragment();
         return fragment;
@@ -42,7 +50,47 @@ public class ArchiveFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_archive, container, false);
+        View view = inflater.inflate(R.layout.fragment_archive, container, false);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.recycle_view_archive);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mRecyclerView.setAdapter(mAdapter = new ArchiveAdapter());
+        return view;
+    }
+
+    class ArchiveAdapter extends RecyclerView.Adapter<ArchiveAdapter.ArchiveViewHolder>
+    {
+
+        @Override
+        public ArchiveViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
+        {
+            ArchiveViewHolder holder = new ArchiveViewHolder(LayoutInflater.from(
+                    getContext()).inflate(R.layout.item_archive, parent,
+                    false));
+            return holder;
+        }
+
+        @Override
+        public void onBindViewHolder(ArchiveViewHolder holder, int position)
+        {
+//            holder.tv.setText(mDatas.get(position));
+        }
+
+        @Override
+        public int getItemCount()
+        {
+            return 1;
+        }
+
+        class ArchiveViewHolder extends RecyclerView.ViewHolder
+        {
+
+            TextView tv;
+
+            ArchiveViewHolder(View view)
+            {
+                super(view);
+//                tv = (TextView) view.findViewById(R.id.id_num);
+            }
+        }
     }
 }

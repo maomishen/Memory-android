@@ -77,7 +77,7 @@ public class MemoryFragment extends BaseFragment {
         @Override
         public int getItemCount()
         {
-            return 1;
+            return 10;
         }
 
         class MemoryViewHolder extends RecyclerView.ViewHolder
